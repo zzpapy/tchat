@@ -1,6 +1,4 @@
- /*  ------ Reset CSS  ------ */
-
-
+/*  ---------------- Debut Reset CSS  ---------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,9 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+
 blockquote, q {
 	quotes: none;
 }
@@ -47,25 +43,27 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*  -----------------  Fin Reset CSS  ----------------- */
 
-/*--FONTS-----------------------------------------------*/
+/*--COULEURS--------------------------------------------*/
 
-.eyesColorGreen{
-	color:#4C9149;
-}
-.noseColorBrown{
-color:#814F2F;
-}
-
-.grey{
-	color:#A8A5A5;
-}
+.eyesColorGreen{color:#4C9149;}
+.noseColorBrown{color:#814F2F;}
+.grey{color:#A8A5A5;}
 
 /*--STRUCTURE--------------------------------------------*/
 
 a{
+	margin:0px 70px;
+	max-height:0px;
 	text-decoration: none;
 	color:#814F2F;
+	text-shadow: 0px 0px 0.8rem #FFF;
+}
+
+a:hover{
+	color:#FFF;
+	text-shadow: 0px 0px 0.3rem #4E270E;
 }
 
 body{
@@ -77,54 +75,56 @@ body{
 }
 
 .divContent{
-	width:100%;
-	height:90%;
 	text-align: center;
 	margin:0 auto;
 }
 
-.container{
-	width: 900px;
+.containerHeader{
+	width: 940px;
+	border-radius: 10px;
 	background-color:white; 
 	margin: 0 auto;
 	margin-bottom: 20px;
-	box-shadow: 0px 3px 0.7em #A8A5A5,inset 0px 3px 0.2em #4C9149;
+	box-shadow: 0px -3px 0.7em #A8A5A5, inset 0px -3px 0.4em #4C9149;
 }
 
-*{
-    box-sizing: border-box;
+.containerContent{
+	width: 900px;
+	border-radius: 10px;
+	background-color:white; 
+	margin: 0 auto;
+	margin-bottom: 20px;
+	box-shadow: 0px -3px 1.3rem #909090, inset 0px -2px 1rem #145B11;
 }
 
-img{
-	max-width: 100%;
-	display: block;
+.containerFooter{
+	width: 940px;
+	border-radius: 10px;
+	background-color:white; 
+	margin: 0 auto;
+	margin-bottom: 20px;
+	box-shadow: 0px 3px 0.7em #A8A5A5, inset 0px 3px 0.4em #4C9149;
 }
 
+*{ box-sizing: border-box;}
 
-h1, h2, h3, h4, h5, h6{
-	text-shadow: 0px 0px 0.8rem #FFF;
-}
+img{ max-width: 100%;display: block;}
 
+h1, h2, h3, h4, h5, h6{	text-shadow: 0px 0px 0.8rem #FFF;}
 
-h1{
-	text-align:left;
-	font-size:60px;
-	margin-left: 50px;
-}
+h1{	text-align:right;font-size:60px;}
+
+h2{	font-size:40px;}
+h3{	font-size:30px;text-align:center;}
+h4{	font-size:24px;text-align:center;}
 
 h2, h6{	text-align:right; margin-right:20px;}
 
-h2{	font-size:35px;}
 
-h6{	font-size:18px;}
+h5{	font-size:25px;}
+h6{	font-size:25px;}
 
-
-
-
-h3{	font-size:25px;
-	text-align:center;}
-
-.catStyle{
+.catStyleHeader{
     background: #4C9149; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#4C9149, #FFF); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#4C9149, #FFF); /* For Opera 11.1 to 12.0 */
@@ -132,10 +132,18 @@ h3{	font-size:25px;
     background: linear-gradient(#4C91492, #FFF); /* Standard syntax */
 }
 
+.catStyleContent{
+    background: #B8D4B7; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#B8D4B7, #FFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#B8D4B7, #FFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#B8D4B7, #FFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#B8D4B7, #FFF); /* Standard syntax */
+}
+
 .catStyleFooter{
 	padding:2px;
-	height:30px;
-	margin-top: 40px;
+	height:40px;
+	margin-top: 20px;
     background: #FFF; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#FFF, #4C9149); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#FFF, #4C9149); /* For Opera 11.1 to 12.0 */
@@ -145,25 +153,19 @@ h3{	font-size:25px;
 
 header{
 	display: block;
-/*	width: 500px;
-*/	height: 100px;
+	height: 100px;
 	margin:2px;
 }
 
-
 nav{
-	text-decoration: none;
+	font-size:25px;
 	display: block;
 	width: 98%;
 	height: 50px;
-	margin: 20px auto;
-	padding-left: 10px;
-	padding-top: 10px;
+	text-align: right;
 }
-
-
-footer img{
-	width: 110px;
-	margin: 0 auto;
+ol, ul {
+	text-align: left;
+	margin-left: 80px;
+	margin-bottom: 40px;
 }
-
