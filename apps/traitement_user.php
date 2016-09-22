@@ -6,7 +6,8 @@
 		header("Location: index.php");
 		exit;
 	}
-	if(isset($_POST["login"], $_POST['password'])){
+	if(isset($_POST["log"], $_POST['password'])){
+		var_dump($_POST);
 		
 		if(!empty($_POST['login'] && !empty($_POST['password']))){
 
@@ -40,7 +41,7 @@
 		}
 	}
 
-	if(isset($_POST["register"], $_POST['password'])){
+	if(isset($_POST["register"], $_POST['password2'])){
 		$admin = 0;
 
 		// var_dump($_POST);

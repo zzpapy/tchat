@@ -3,6 +3,10 @@
 	//var_dump($_POST);
 	$db = mysqli_connect("192.168.1.95", "tchat", "tchat", "tchat");
 	
+	function __autoload($className){
+		require('models/'.$className.'.class.php');
+	}
+
 	$error = '';
 	$page = 'home';
 	$access = ["home", "login", "register", "tchat"];
