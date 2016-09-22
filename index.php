@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	//var_dump($_POST);
+	// var_dump($_SESSION);
 	$db = mysqli_connect("192.168.1.95", "tchat", "tchat", "tchat");
 	
 	function __autoload($className){
