@@ -1,1 +1,1 @@
-<div><?=$message->getAuthor()->getLogin()?>:<?=$message->getContent()?></div>
+<div><?=htmlentities($message->getAuthor()->getLogin())?>:<?=htmlentities($message->getContent())?></div>
