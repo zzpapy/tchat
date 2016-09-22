@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// var_dump($_SESSION);
 	$db = mysqli_connect("192.168.1.95", "tchat", "tchat", "tchat");
 	
 	function __autoload($className){
@@ -10,6 +9,7 @@
 	$error = '';
 	$page = 'home';
 	$access = ["home", "login", "register", "tchat", "logout"];
+	// var_dump($page);
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $access))
 	{
