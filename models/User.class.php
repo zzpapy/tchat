@@ -56,9 +56,9 @@
 			if(empty($login)){
 				throw new Exception("Veuillez renseigner un nom");
 			}
-			else if(strlen($login) < 3 || strlen($login) > 63){
-				throw new Exception("Nom trop court");
-			}
+			// else if(strlen($login) < 3 || strlen($login) > 63){
+			// 	throw new Exception("Nom trop court");
+			// }
 			else{
 				$this->login = $login;
 			}
