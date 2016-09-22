@@ -1,3 +1,10 @@
 <?php
-require('views/menu.phtml');
+	if(isset($_SESSION["login"]))
+	{
+		require('views/menu_in.phtml');
+	}
+	else
+	{
+		require('views/menu.phtml');
+	}
 ?>
