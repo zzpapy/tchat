@@ -18,6 +18,10 @@ h1{
 	margin: 0 auto;
 }
 
+.italic{
+	font-style: italic;
+}
+
 /* header */
 header{
 	display: block;
