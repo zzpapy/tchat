@@ -2,6 +2,7 @@
 	class UserManager
 	{
 		private $db;
+
 		public function __construct($db)
 		{
 			$this->db = $db;
@@ -15,6 +16,7 @@
 				$list[] = $user;
 			return $list;
 		}
+
 		public function findById($id)
 		{
 			$id = intval($id);
@@ -23,7 +25,6 @@
 			$user = mysqli_fetch_object($res, "User", [$this->db]);
 			return $user;
 		}
-		
 
 		public function findByLogin($login)
 		{
@@ -40,17 +41,13 @@
 			$user = new User($this->db);
 			$user-> setLogin($login);
 			$user-> setPassword($password);
-			
 
 			$mail = mysqli_real_escape_string($this->db, $user->getLogin());			
 			$password = mysqli_real_escape_string($this->db, $user->getPassword());
-			
-			
+
 			$query = "INSERT INTO user (password,login) 
 			VALUES('".$password."',  '".$login."')";
 			mysqli_query($this->db, $query);
-			
-			
 
 			if (mysqli_errno($this->db) == 1062){
 				throw new Exception("error");
