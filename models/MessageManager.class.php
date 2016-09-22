@@ -1,5 +1,5 @@
 <?php
-class CommentManager
+class MessageManager
 	
 {
 	private $db;
@@ -20,10 +20,10 @@ class CommentManager
 	public function findById($id)
 	{
 		$id = intval($id);
-		$query = "SELECT * FROM comment WHERE id='".$id."'";
+		$query = "SELECT * FROM message WHERE id='".$id."'";
 		$res = mysqli_query($this->db, $query);
-		$comment = mysqli_fetch_object($res, "Comment", [$this->db]);
-		return $comment;
+		$message = mysqli_fetch_object($res, "Message", [$this->db]);
+		return $message;
 	}
 	// public function find($id)
 	// {
@@ -42,14 +42,15 @@ class CommentManager
 
 	
 
-	public function create ($content,$id_author)
+	public function create ($content,User $author)
 	{
 		$message = new Message($this->db);		
 		$message->setContent($content);
-		$message-> setIdAuthor($id_author);
+		$message-> setAuthor($author);
 		
 		$date = mysqli_real_escape_string($this->db, $message->getDate());
 		$content = mysqli_real_escape_string($this->db, $message-> getContent());
+		$id_author = $message->getAuthor()->getId();
 		$query = "INSERT INTO message ( content,id_author ) 
 		VALUES('".$content."', '".$id_author."')";
 		mysqli_query($this->db, $query);

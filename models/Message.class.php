@@ -1,6 +1,6 @@
 <?php 
 // Définition de la classe Article
-class Comment
+class Message
 {
 	
 	// Propriétés
@@ -31,6 +31,20 @@ class Comment
 	}
 	
 	
+	public function getAuthor()
+	{
+		// Si l'auteur n'a pas encore été récupéré ou n'est pas connu
+		if (!$this->author)
+		{
+			// Il faut donc aller le chercher !
+			// On récupère le manager qui va bien (ici, UserManager)
+			$manager = new UserManager($this->db);
+			// Et on lui demande d'aller chercher l'User qui correspond à id_author
+			$this->author = $manager->findById($this->id_author);
+		}
+		// On peut du coup retourner $this->author
+		return $this->author;
+	}
 
 	// Liste des setters
 	public function setAuthor(User $author)
@@ -54,20 +68,6 @@ class Comment
 	// 	$this->id_caddy = $id_caddy;
 	// }
 	
-	public function getAuthor()
-	{
-		// Si l'auteur n'a pas encore été récupéré ou n'est pas connu
-		if (!$this->author)
-		{
-			// Il faut donc aller le chercher !
-			// On récupère le manager qui va bien (ici, UserManager)
-			$manager = new UserManager($this->db);
-			// Et on lui demande d'aller chercher l'User qui correspond à id_author
-			$this->author = $manager->findById($this->id_author);
-		}
-		// On peut du coup retourner $this->author
-		return $this->author;
-	}
 
 
 	
