@@ -8,11 +8,12 @@
 		private $login;
 		private $password;
 		private $date;
+		private $db;
 		
 
-		public function __construct($tchat)
+		public function __construct($db)
 		{
-			$this->tchat = $tchat;
+			$this->db = $db;
 		}
 // Méthodes
 // GETTERS
@@ -21,7 +22,7 @@
 		{
 			if (!$this->comments)
 			{
-				$manager = new CommentManager($this->tchat);
+				$manager = new CommentManager($this->db);
 				$this->comments = $manager->findByAuthor($this);
 			}
 			return $this->comments;
@@ -43,7 +44,10 @@
 		{
 			return $this->date;
 		}
-		
+		public function verifPassword($password)
+		{
+			return password_verify($password, $this->password);
+		}
 
 
 // SETTERS
@@ -59,18 +63,19 @@
 				$this->login = $login;
 			}
 		}
-		public function setFirstname($password)
+		
+		public function setPassword($password)
 		{
+			//conditions de verification de password
 			if(empty($password)){
-				throw new Exception("Veuillez renseigner un prenom");
+				throw new Exception("Merci de remplir tout les champs");
 			}
-			else if(strlen($password) < 3 || strlen($password) > 63){
-				throw new Exception("Prénom trop court");
+			else if(strlen($password) < 3){
+				throw new Exception("Le mot de passe est trop court");
 			}
 			else{
-				$this->password = $password;
+				$this->password = password_hash($password, PASSWORD_DEFAULT);
 			}
-			
 		}
 		
 

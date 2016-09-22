@@ -1,17 +1,17 @@
 <?php
 	class UserManager
 	{
-		private $tchat;
-		public function __construct($tchat)
+		private $db;
+		public function __construct($db)
 		{
-			$this->tchat = $tchat;
+			$this->db = $db;
 		}
 
 		public function findAll()
 		{
 			$query = "SELECT * FROM user";
-			$res = mysqli_query($this->tchat, $query);
-			while ($user = mysqli_fetch_object($res, "User", [$this->tchat]))
+			$res = mysqli_query($this->db, $query);
+			while ($user = mysqli_fetch_object($res, "User", [$this->db]))
 				$list[] = $user;
 			return $list;
 		}
@@ -19,43 +19,43 @@
 		{
 			$id = intval($id);
 			$query = "SELECT * FROM user WHERE id='".$id."'";
-			$res = mysqli_query($this->tchat, $query);
-			$user = mysqli_fetch_object($res, "User", [$this->tchat]);
+			$res = mysqli_query($this->db, $query);
+			$user = mysqli_fetch_object($res, "User", [$this->db]);
 			return $user;
 		}
 		
 
 		public function findByLogin($login)
 		{
-			$login = mysqli_real_escape_string($this->tchat, $login);
+			$login = mysqli_real_escape_string($this->db, $login);
 			$query = "SELECT * FROM user WHERE login='".$login."'";
-			$res = mysqli_query($this->tchat, $query);
-			$user = mysqli_fetch_object($res, "User", [$this->tchat]);
+			$res = mysqli_query($this->db, $query);
+			$user = mysqli_fetch_object($res, "User", [$this->db]);
 			
 			return $user;
 		}
 
 		public function create ($password, $login)
 		{
-			$user = new User($this->tchat);
+			$user = new User($this->db);
 			$user-> setLogin($login);
 			$user-> setPassword($password);
 			
 
-			$mail = mysqli_real_escape_string($this->tchat, $user->getLogin());			
-			$password = mysqli_real_escape_string($this->tchat, $user->getPassword());
+			$mail = mysqli_real_escape_string($this->db, $user->getLogin());			
+			$password = mysqli_real_escape_string($this->db, $user->getPassword());
 			
 			
 			$query = "INSERT INTO user (password,login) 
 			VALUES('".$password."',  '".$login."')";
-			mysqli_query($this->tchat, $query);
+			mysqli_query($this->db, $query);
 			
-			// var_dump(mysqli_error($this->db), mysqli_errno($this->db));
+			
 
-			if (mysqli_errno($this->tcaht) == 1062){
+			if (mysqli_errno($this->db) == 1062){
 				throw new Exception("error");
 			}
-			$id_user = mysqli_insert_id($this->tcaht);
+			$id_user = mysqli_insert_id($this->db);
 			return $this->findById($id_user);
 		}
 	}
