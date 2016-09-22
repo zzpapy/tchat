@@ -1,8 +1,98 @@
-/* structure */
+ /*  ------ Reset CSS  ------ */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--FONTS-----------------------------------------------*/
+/*
+.fontStyleJAH{
+	font-family: 'Lakki Reddy', cursive;
+}
+
+.fontStyleJAH{
+	font-family: 'Just Another Hand', cursive;
+}
+*/
+
+.eyesColorGreen{
+	color:#4C9149;
+}
+.noseColorBrown{
+color:#814F2F;
+}
+
+.grey{
+	color:#A8A5A5;
+}
+
+/*--STRUCTURE--------------------------------------------*/
+
 body{
-	background: white;
-	font-family: Arial, helvetica, sans-serif, serif;
+	font-family: 'Lakki Reddy', cursive;
+	background: #FFF;
+	margin-top: 50px;
+	text-align: center;
+	color:#814F2F;
+}
+
+.divContent{
+	width:100%;
+	height:90%;
+	text-align: center;
+	margin:0 auto;
+}
+
+.container{
+	width: 900px;
+	background-color:white; 
 	margin: 0 auto;
+	margin-bottom: 20px;
+	box-shadow: 0px 3px 0.7em #A8A5A5,inset 0px 3px 0.2em #4C9149;
 }
 
 *{
@@ -14,24 +104,60 @@ img{
 	display: block;
 }
 
+/*
 h1{
 	margin: 0 auto;
 }
+*/
 
-.italic{
-	font-style: italic;
+h1, h2, h3, h4, h5, h6{
+	text-shadow: 0px 0px 0.8rem #FFF;
 }
 
-/* header */
+
+h1{
+	text-align:left;
+	font-size:60px;
+	margin-left: 50px;
+}
+
+h2, h6{	text-align:right; margin-right:20px;}
+
+h2{	font-size:35px;}
+
+h6{	font-size:18px;}
+
+
+
+
+h3{	font-size:25px;
+	text-align:center;}
+
+.catStyle{
+    background: #4C9149; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4C9149, #FFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4C9149, #FFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4C9149, #FFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4C91492, #FFF); /* Standard syntax */
+}
+
+.catStyleFooter{
+	padding:2px;
+	height:30px;
+	margin-top: 40px;
+    background: #FFF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFF, #4C9149); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF, #4C9149); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF, #4C9149); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF, #4C9149); /* Standard syntax */
+}
+
 header{
 	display: block;
-	background: #fff;
-	width: 500px;
-	height: 100px;
-	border: 1px black solid;
-	margin: 20px auto;
+/*	width: 500px;
+*/	height: 100px;
+	margin:2px;
 }
-
 
 
 nav{
@@ -46,6 +172,7 @@ nav{
 }
 
 /* div */
+/*
 .cube1{
 	display: block;
 	width: 500px;
@@ -69,7 +196,9 @@ nav{
 	padding: 0px 50px;
 }
 
+*/
 /* footer */
+/*
 footer{
 	display: block;
 	background: #fff;
@@ -78,3 +207,4 @@ footer{
 	border: 1px black solid;
 	margin: 20px auto;
 }
+*/
