@@ -8,6 +8,7 @@ class Message
 	private $date  ;
 	private $content;
 	private $id_author ;
+	private $author ;
 	private $db;
 	
 	public function __construct($db)

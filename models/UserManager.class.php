@@ -41,8 +41,8 @@
 			$user-> setLogin($login);
 			$user-> setPassword($password);
 			
-
-			$mail = mysqli_real_escape_string($this->db, $user->getLogin());			
+			// var_dump($user->getLogin());
+			$login = mysqli_real_escape_string($this->db, $user->getLogin());			
 			$password = mysqli_real_escape_string($this->db, $user->getPassword());
 			
 			

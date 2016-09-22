@@ -57,7 +57,6 @@
 			catch (Exception $exception)
 			{
 				$error = $exception->getMessage();
-				var_dump($error);
 			}
 			header("Location: index.php?page=login");
 		exit;
