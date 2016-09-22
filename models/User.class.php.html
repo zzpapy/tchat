@@ -8,11 +8,12 @@
 		private $login;
 		private $password;
 		private $date;
+		private $db;
 		
 
-		public function __construct($tchat)
+		public function __construct($db)
 		{
-			$this->tchat = $tchat;
+			$this->db = $db;
 		}
 // Méthodes
 // GETTERS
@@ -21,7 +22,7 @@
 		{
 			if (!$this->comments)
 			{
-				$manager = new CommentManager($this->tchat);
+				$manager = new CommentManager($this->db);
 				$this->comments = $manager->findByAuthor($this);
 			}
 			return $this->comments;
