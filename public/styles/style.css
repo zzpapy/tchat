@@ -78,3 +78,8 @@ footer{
 	border: 1px black solid;
 	margin: 20px auto;
 }
+
+footer img{
+	width: 110px;
+	margin: 0 auto;
+}
