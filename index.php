@@ -9,7 +9,7 @@
 
 	$error = '';
 	$page = 'home';
-	$access = ["home", "login", "register", "tchat"];
+	$access = ["home", "login", "register", "tchat", "logout"];
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $access))
 	{
