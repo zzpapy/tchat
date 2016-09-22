@@ -9,11 +9,22 @@
 
 	$error = '';
 	$page = 'home';
-	$access = ["home", "login", "register", "tchat", "logout"];
-	
-	if (isset($_GET['page']) && in_array($_GET['page'], $access))
+	$access = ["home", "login", "register", "logout"];
+	$accessUser = ["home", "tchat", "logout"];
+
+	if(isset($_SESSION['login']))
 	{
-		$page = $_GET['page'];
+		if(isset($_GET["page"]) && in_array($_GET["page"], $accessUser))
+		{
+			$page = $_GET["page"];
+		}
+	}
+	else
+	{
+		if(isset($_GET["page"]) && in_array($_GET["page"], $access))
+		{
+			$page = $_GET["page"];
+		}	
 	}
 
 	$traitementList = [
