@@ -50,7 +50,7 @@
 			VALUES('".$password."',  '".$login."')";
 			mysqli_query($this->tchat, $query);
 			
-			// var_dump(mysqli_error($this->db), mysqli_errno($this->db));
+			
 
 			if (mysqli_errno($this->tcaht) == 1062){
 				throw new Exception("error");

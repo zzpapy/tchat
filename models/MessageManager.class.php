@@ -1,7 +1,7 @@
 <?php
 class CommentManager
-{
 	
+{
 	private $tchat;
 	public function __construct($tchat)
 	{
