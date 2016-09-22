@@ -99,6 +99,7 @@ body{
 
 .containerFooter{
 	width: 940px;
+	height:30px;
 	border-radius: 10px;
 	background-color:white; 
 	margin: 0 auto;
@@ -108,7 +109,9 @@ body{
 
 *{ box-sizing: border-box;}
 
-img{ max-width: 100%;display: block;}
+.imgFooter{ max-width: 2%;
+}
+
 
 h1, h2, h3, h4, h5, h6{	text-shadow: 0px 0px 0.8rem #FFF;}
 
@@ -142,13 +145,22 @@ h6{	font-size:25px;}
 
 .catStyleFooter{
 	padding:2px;
-	height:40px;
 	margin-top: 20px;
     background: #FFF; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#FFF, #4C9149); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#FFF, #4C9149); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#FFF, #4C9149); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#FFF, #4C9149); /* Standard syntax */
+    background: -webkit-linear-gradient(#FFF, #639C61); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF, #639C61); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF, #639C61); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF, #639C61); /* Standard syntax */
+}
+
+.floatLeft{
+	float:left;
+}
+
+.divCenter{
+	width:100%;
+	text-align: center;
+	margin:0 auto;
 }
 
 header{

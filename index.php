@@ -10,7 +10,7 @@
 	$page = 'home';
 
 	$access = ["home", "login", "register", "logout"];
-	$accessUser = ["home", "tchat", "logout"];
+	$accessUser = ["home", "tchat", "logout","list_message"];
 
 	if(isset($_SESSION['login']))
 	{
