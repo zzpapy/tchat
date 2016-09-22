@@ -52,10 +52,10 @@
 			
 			
 
-			if (mysqli_errno($this->tcaht) == 1062){
+			if (mysqli_errno($this->db) == 1062){
 				throw new Exception("error");
 			}
-			$id_user = mysqli_insert_id($this->tcaht);
+			$id_user = mysqli_insert_id($this->db);
 			return $this->findById($id_user);
 		}
 	}
