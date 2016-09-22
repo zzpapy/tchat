@@ -49,15 +49,6 @@ table {
 }
 
 /*--FONTS-----------------------------------------------*/
-/*
-.fontStyleJAH{
-	font-family: 'Lakki Reddy', cursive;
-}
-
-.fontStyleJAH{
-	font-family: 'Just Another Hand', cursive;
-}
-*/
 
 .eyesColorGreen{
 	color:#4C9149;
@@ -71,6 +62,11 @@ color:#814F2F;
 }
 
 /*--STRUCTURE--------------------------------------------*/
+
+a{
+	text-decoration: none;
+	color:#814F2F;
+}
 
 body{
 	font-family: 'Lakki Reddy', cursive;
@@ -104,11 +100,6 @@ img{
 	display: block;
 }
 
-/*
-h1{
-	margin: 0 auto;
-}
-*/
 
 h1, h2, h3, h4, h5, h6{
 	text-shadow: 0px 0px 0.8rem #FFF;
@@ -161,54 +152,14 @@ header{
 
 
 nav{
+	text-decoration: none;
 	display: block;
-	background: #fff;
-	width: 500px;
+	width: 98%;
 	height: 50px;
-	border: 1px black solid;
 	margin: 20px auto;
 	padding-left: 10px;
 	padding-top: 10px;
 }
-
-/* div */
-/*
-.cube1{
-	display: block;
-	width: 500px;
-	min-height: 500px;
-	border: 1px black solid;
-	margin: 20px auto;
-	padding: 30px 10px;
-}
-
-.cube2{
-	border: 1px black solid;
-	width: 300px;
-	margin: 0 auto;
-	background: linear-gradient(30deg, #E7FF31, #48FF31);
-}	
-
-.center{
-	display: block;
-	margin: 0 auto;
-	width: 300px;
-	padding: 0px 50px;
-}
-
-*/
-/* footer */
-/*
-footer{
-	display: block;
-	background: #fff;
-	width: 500px;
-	height: 100px;
-	border: 1px black solid;
-	margin: 20px auto;
-}
-<<<<<<< HEAD
-*/
 
 
 footer img{
