@@ -32,6 +32,7 @@
 		"login" => "user",
 		"register" => "user",
 		"logout"=>"user",
+		"tchat"=>"tchat"
 	];
 	
 	if(isset($traitementList[$page]))
