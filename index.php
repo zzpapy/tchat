@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	// var_dump($_SESSION);
 	$db = mysqli_connect("192.168.1.95", "tchat", "tchat", "tchat");
 	
 	function __autoload($className){
@@ -9,6 +8,7 @@
 
 	$error = '';
 	$page = 'home';
+
 	$access = ["home", "login", "register", "logout"];
 	$accessUser = ["home", "tchat", "logout"];
 
@@ -20,6 +20,7 @@
 		}
 	}
 	else
+
 	{
 		if(isset($_GET["page"]) && in_array($_GET["page"], $access))
 		{
@@ -31,6 +32,7 @@
 		"login" => "user",
 		"register" => "user",
 		"logout"=>"user",
+		"tchat"=>"tchat"
 	];
 	
 	if(isset($traitementList[$page]))
