@@ -11,10 +11,19 @@
 	{
 		$page = $_GET['page'];
 	}
+
+	$traitementList = [
+		"login" => "user",
+		"register" => "user",
+		"logout"=>"user",
+	];
 	
-	$accessTraitement = [""];
-	
-	if (in_array($page, $accessTraitement))
-		require('apps/traitement_'.$page.'.php');
-	require('apps/skel.php');
+	if(isset($traitementList[$page]))
+	{
+		require("apps/traitement_".$traitementList[$page].".php");
+	}
+	if (isset($_GET['ajax']))
+		require('apps/recherche_res.php');
+	else
+		require("apps/skel.php");
 ?>
