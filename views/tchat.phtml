@@ -1,5 +1,5 @@
 <div class="cube1">
-	<div id="messages">
+	<div id="input">
             <!-- les messages du tchat -->
 			<?php require('apps/list_message.php'); ?>
             
@@ -8,11 +8,9 @@
 
 		<form id="form" method="POST" >
 		    Pseudo : <?=htmlentities($user->getLogin())?><br />
-		    Message : <textarea name="message" id="message"></textarea><br />
-		    <!-- <input type="submit" name="submit" value="Envoyez votre message !" id="envoi" /> -->
+		    Message : <textarea autofocus name="message" id="message"></textarea><br />
+		   
 		    <button type="submit" name="submit">Valider</button>
 		</form>
 
-       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="public/scripts/tchat.js"></script>-->
     </body>

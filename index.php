@@ -40,7 +40,7 @@
 		require("apps/traitement_".$traitementList[$page].".php");
 	}
 	if (isset($_GET['ajax']))
-		require('apps/recherche_res.php');
+		require('apps/'.$page.'.php');
 	else
 		require("apps/skel.php");
 ?>
