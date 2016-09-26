@@ -11,7 +11,7 @@ class MessageManager
 	public function findAll()
 	{
 		$list=[];
-		$query = "SELECT * FROM message";
+		$query = "SELECT * FROM message ORDER BY date  ASC";
 		$res = mysqli_query($this->db, $query);
 		while ($comment = mysqli_fetch_object($res, "Message", [$this->db]))
 			$list[] = $comment;

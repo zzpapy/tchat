@@ -1,16 +1,18 @@
 <div class="cube1">
-	<div id="input">
+	<div id="input" >
             <!-- les messages du tchat -->
 			<?php require('apps/list_message.php'); ?>
             
 
         </div>
-
-		<form id="form" method="POST" >
-		    Pseudo : <?=htmlentities($user->getLogin())?><br />
-		    Message : <textarea autofocus name="message" id="message"></textarea><br />
-		   
-		    <button type="submit" name="submit">Valider</button>
-		</form>
+</div>
+<div>
+	<form id="form" method="POST" >
+	    Pseudo : <?=htmlentities($user->getLogin())?><br />
+	    Message : <textarea autofocus name="message" id="message"></textarea><br />
+	   
+	    <button type="submit" name="submit">Valider</button>
+	</form>
+</div>
 
     </body>
