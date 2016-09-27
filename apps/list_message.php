@@ -1,5 +1,4 @@
 <?php
-
 	$manager=new MessageManager($db);
 	$messages=$manager->findAll();
 	$count=0;
