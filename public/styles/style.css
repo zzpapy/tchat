@@ -87,16 +87,17 @@ body{
 	margin-bottom: 20px;
 	box-shadow: 0px -3px 0.7em #A8A5A5, inset 0px -3px 0.4em #4C9149;
 }
-.cube1{
-	/*height:800px;*/
-	/*overflow:auto;*/
-}
-.message{
-	border: 1px solid green;
+
+.displayMessage{
+	width: 800px;
+	background-color: white;	
+	border: 1px solid #527D50;
 	border-radius: 15px;
-	padding: 25px;
-	box-shadow: 10px 5px 5px #888888;
-	margin:10px ;
+	padding: 20px;
+	transform:translateY(26px);
+	margin-top:25px !important;
+	box-shadow: 0px 0px 0.8rem  #145B11, inset 0px -2px 1rem #909090;
+	margin:0 auto ;
 }
 
 .containerContent{
@@ -105,6 +106,7 @@ body{
 	background-color:white; 
 	margin: 0 auto;
 	margin-bottom: 20px;
+	text-align: center;
 	box-shadow: 0px -3px 1.3rem #909090, inset 0px -2px 1rem #145B11;
 }
 
@@ -114,6 +116,7 @@ body{
 	border-radius: 10px;
 	background-color:white; 
 	margin: 0 auto;
+	padding-bottom: 10px;
 	margin-bottom: 20px;
 	box-shadow: 0px 3px 0.7em #A8A5A5, inset 0px 3px 0.4em #4C9149;
 }
@@ -148,10 +151,10 @@ h6{	font-size:25px;}
 
 .catStyleContent{
     background: #B8D4B7; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#B8D4B7, #FFF); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#B8D4B7, #FFF); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#B8D4B7, #FFF); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#B8D4B7, #FFF); /* Standard syntax */
+    background: -webkit-linear-gradient(#B8D4B7, #D2E4D2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#B8D4B7, #D2E4D2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#B8D4B7, #D2E4D2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#B8D4B7, #D2E4D2); /* Standard syntax */
 }
 
 .catStyleFooter{
@@ -168,10 +171,84 @@ h6{	font-size:25px;}
 	float:left;
 }
 
+.floatRight{
+	float:right;
+}
+
 .divCenter{
 	width:100%;
 	text-align: center;
 	margin:0 auto;
+}
+
+.inputRegisterLogin{
+	width:350px;
+	margin-top:20px;
+	margin-bottom:5px !important;
+	text-align: center;
+	margin:0 auto;
+}
+
+.checkBoxCatStyle{
+	margin-bottom: 6px;
+}
+
+.translatY{
+	transform:translateY(4px);
+}
+
+.labelRegisterLogin{
+	margin-top:5px;
+	margin-bottom:5px;
+	text-align: center;
+	margin:0 auto;
+} 
+
+.labelInputMessage{
+	margin-top:40px;
+	margin-bottom:0px;
+}
+
+.inputMessage{
+	width:700px;
+	background-color: white;	
+	border: 1px solid #527D50;
+	border-radius: 15px;
+	margin-bottom:15px !important;
+	padding:15px;
+	text-align: center;
+	margin:0 auto;
+	transform:translateY(10px);
+	box-shadow: 0px 0px 0.6rem  #145B11, inset 0px -2px 1rem #909090;
+}
+
+.submitButton{
+	font-family: 'Lakki Reddy', cursive !important;
+	color:#814F2F !important;
+	font-size: 20px !important;
+	border: 1px solid #527D50;
+	border-radius: 15px;
+	width:300px;
+	height:30px;
+	margin-bottom:25px;
+	margin-top: 2px !important;
+	background-color: white;
+	box-shadow: 0px 3px 0.4rem #0D460B, inset 0px -1px 1rem #FFF;
+}
+
+.submitButton:hover{
+	color:#034B00 !important;
+	box-shadow: 0px 3px 0.8rem #034B00, inset 0px -1px 1rem #FFF;
+}
+
+.catStyleSubmit{
+	padding:2px;
+	margin-top: 20px;
+    background: #FFF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFF, #2A6129); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF, ##2A6129); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF, #2A6129); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF, ##2A6129); /* Standard syntax */
 }
 
 header{

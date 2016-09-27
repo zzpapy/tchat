@@ -1,28 +1,28 @@
-<div class="cube1">
-	<form method="post">	
+<div class="containerContent divcontent catStyleContent">
+	<form method="post" class="">	
 	    	<!-- Nom -->
-    	<div>
+		<div class="inputRegisterLogin">
     		<label for="aliaslogin">Login :</label>
-    		<input id="aliaslogin" type="text" name="login" required/>
+    		<input id="aliaslogin" type="text" name="login" class="inputRegisterLogin"required/>
 		</div>
 		<!-- Prénom -->
-		<div>
-	    		<label for="aliaspassword">Password :</label>
-	    		<input id="aliaspassword" type="password" name="password" required/>
+		<div class="inputRegisterLogin">
+    		<label for="aliaspassword" class="labelRegisterLogin">Password :</label>
+    		<input id="aliaspassword" type="password" name="password" class="inputRegisterLogin" required/>
 		</div>
 			<!-- password -->
-		<div>
-				<label for="aliaspassword2">Password :</label>
-			    <input id="aliaspassword2" type="password" name="password2"  required/>
+		<div class="inputRegisterLogin">
+			<label for="aliaspassword2" class="labelRegisterLogin">Password :</label>
+		    <input id="aliaspassword2" type="password" name="password2" class="inputRegisterLogin" required/>
 		</div>
 		<!-- checkbox -->
-			<div>
-			<label for="aliasvalid">je ne suis pas un robot</label>
-			<input id="aliasvalid" type="checkbox" name="robot">    	
+		<div class="inputRegisterLogin">
+			<label for="aliasvalid" class="labelRegisterLogin">je ne suis pas un robot</label>
+			<input id="aliasvalid" type="checkbox" name="robot" class="translatY">    	
 		</div>
 		<!-- valid -->
 		<div>
-			<button type="submit" name="register">Envoyer</button>
+			<button type="submit" name="register" class="submitButton catStyleSubmit">Envoyer</button>
 		</div>
 	</form>
 </div>
