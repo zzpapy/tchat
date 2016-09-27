@@ -186,6 +186,13 @@ nav{
 	width: 98%;
 	height: 50px;
 	text-align: right;
+
+
+	/*position: fixed;
+	  top: 0;
+	  left: 0;*/
+	  
+  
 }
 ol, ul {
 	text-align: left;
